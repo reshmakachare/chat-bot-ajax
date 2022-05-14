@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	overflow: hidden;
+	background: #f2f2f2;
+	font-family: 'DM Sans', sans-serif;
+}
+
+h2 {
+
+	font-size: 26px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+
+h5 {
+	font-size: 14px;
+}
+
+
+p {
+	font-size: 14px;
+}
+
+#checked {
+	display: none;
+}
+
+label {
+	position: absolute;
+	right: 30px;
+	bottom: 20px;
+	height: 55px;
+	width: 55px;
+	background: linear-gradient(180deg, #160f16 0%, #673b63 100%);
+	text-align: center;
+	line-height: 55px;
+	border-radius: 50px;
+	font-size: 30px;
+	color: #fff;
+	cursor: pointer;
+}
+
+label i {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 0.4s ease;
+}
+
+label i.fas {
+	opacity: 0;
+	pointer-events: none;
+}
+
+
+#checked:checked~label i.fas {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translate(-50%, -50%) rotate(180deg);
+}
+
+#checked:checked~label i.fab {
+	opacity: 0;
+	pointer-events: none;
+	transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.boxwrap {
+	position: fixed;
+	right: 30px;
+	bottom: 0px;
+	max-width: 400px;
+	background: #fff0;
+	border-radius: 15px;
+	box-shadow: 0px 15px 20px rgb(0 0 0 / 0%);
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#checked:checked~.boxwrap {
+	opacity: 1;
+	bottom: 85px;
+	pointer-events: auto;
+}
+
+.boxwrap .title_text {
+	line-height: 25px;
+	display: block;
+	color: #fff;
+	border-radius: 15px 15px 0 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10%;
+	padding-right: 30px;
+	height: 220px;
+	background: linear-gradient(180deg, #160f16 0%, #673b63 100%);
+}
+
+
+.boxwrap .chat-box {
+	margin-top: -100px;
+
+	padding-left: 20px;
+	padding-right: 20px;
+
+	width: 100%;
+
+}
+
+.chat-box .desc-text {
+	color: #403643;
+	text-align: center;
+	line-height: 20px;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.chat-box form {
+	background: -webkit-linear-gradient(left, #fefefe, #f7f7f7);
+
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 50px;
+
+	margin: 20px 0;
+	border-radius: 10px;
+	border: 1px solid lightgrey;
+}
+
+.chat-box form .field {
+	height: 50px;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.chat-box form .field:last-child {
+	margin-bottom: 15px;
+}
+
+.chat-box form .question {
+	height: 50px;
+	width: 100%;
+	margin-top: 20px;
+
+
+}
+
+.chat-box form .question:last-child {
+	margin-bottom: 15px;
+}
+
+
+form .question input,
+form .question button,
+form .textarea textarea {
+	width: 100%;
+	height: 100%;
+	padding-left: 20px;
+	border: 1px solid lightgrey;
+	outline: none;
+	border-radius: 10px;
+	font-size: 12px;
+	text-align: left;
+	transition: all 0.3s ease;
+}
+
+form .question input:focus,
+form .textarea textarea:focus {
+	border-color: #fc83bb;
+}
+
+form .field input::placeholder,
+form .textarea textarea::placeholder {
+	color: silver;
+	transition: all 0.3s ease;
+}
+
+form .question input:focus::placeholder,
+form .textarea textarea:focus::placeholder {
+	color: lightgrey;
+}
+
+
+.chat-box form .question button {
+	border: ;
+	outline: none;
+	cursor: pointer;
+	color: #000;
+	font-size: 12px;
+	font-weight: 500;
+	background: white;
+	transition: all 0.3s ease;
+	padding-right: 4px;
+}
+
+
+form .field input,
+form .field button,
+form .textarea textarea {
+	width: 100%;
+	height: 100%;
+	padding-left: 20px;
+	border: 1px solid lightgrey;
+	outline: none;
+	border-radius: 25px;
+	font-size: 12px;
+	transition: all 0.3s ease;
+}
+
+form .field input:focus,
+form .textarea textarea:focus {
+	border-color: #fc83bb;
+}
+
+form .field input::placeholder,
+form .textarea textarea::placeholder {
+	color: silver;
+	transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder,
+form .textarea textarea:focus::placeholder {
+	color: lightgrey;
+}
+
+
+.chat-box form .textarea {
+	height: 70px;
+	width: 100%;
+}
+
+.chat-box form .textarea textarea {
+	height: 100%;
+	border-radius: 50px;
+	resize: none;
+	padding: 15px 20px;
+	font-size: 16px;
+}
+
+.chat-box form .field button {
+	border: ;
+	outline: none;
+	cursor: pointer;
+	color: #000;
+	font-size: 14px;
+	font-weight: 500;
+	background: white;
+	transition: all 0.3s ease;
+}
+
+
+@media (max-width: 1000px) {
+
+
+	.boxwrap .title_text {
+		line-height: 25px;
+		padding-top: 22px;
+
+
+	}
+
+	h2 {
+
+		font-size: 28px;
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+
+	p {
+		font-size: 16px;
+	}
+
+}
+
+
+@media (max-width: 800px) {
+	.boxwrap .title_text {
+		line-height: 21px;
+
+
+	}
+
+
+	h2 {
+
+		font-size: 22px;
+	}
+
+	h4 {
+		font-size: 16px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+}
